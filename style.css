@@ -1,0 +1,48 @@
+/* Exemplo 01 */
+
+/* .container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 16px;
+} */
+
+/* Exemplo 02 */
+
+/* .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px 100px 100px;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 16px;
+} */
+
+/* Exemplo 03 */
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 16px;
+} */
+
+/* Exemplo 04 */
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 16px;
+}
