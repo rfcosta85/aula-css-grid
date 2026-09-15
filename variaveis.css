@@ -1,0 +1,142 @@
+/* ==========================================
+   1. AS NOSSAS VARIÁVEIS (DESIGN SYSTEM)
+   ========================================== */
+:root {
+    /* Cores padronizadas */
+    --cor-principal: #4f46e5;       
+    --cor-secundaria: #4b5563;     
+    --cor-fundo-site: #f9fafb;       
+    --cor-fundo-caixa: #ffffff;       
+    --cor-texto: #111827;     
+
+    /* Espaçamentos padronizados (Paddings, Margins e Gaps) */
+    --espaco-pequeno: 8px;
+    --espaco-medio: 16px;             
+    --espaco-grande: 24px;
+
+    /* Arredondamento de bordas padronizado */
+    --borda-arredondada: 8px;
+}
+
+/* ==========================================
+   2. REGRAS GERAIS DA PÁGINA
+   ========================================== */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--cor-fundo-site);
+    color: var(--cor-texto);
+    padding: var(--espaco-grande);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--espaco-grande);
+}
+
+/* ==========================================
+   3. CONFIGURAÇÃO DO LAYOUT
+   ========================================== */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-grande);
+}
+
+/* ==========================================
+   4. COMPONENTES (As Caixas e os Botões)
+   ========================================== */
+.card {
+    background-color: var(--cor-fundo-caixa);
+    border-radius: var(--borda-arredondada);
+    padding: var(--espaco-grande);
+    border: 1px solid #ddd;
+}
+
+
+.card__title {
+    margin: 0 0 var(--espaco-pequeno) 0;
+}
+
+.card__text {
+    margin-bottom: var(--espaco-grande);
+}
+
+/* Base dos Botões */
+.btn {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: var(--espaco-medio) var(--espaco-grande);
+    border-radius: var(--borda-arredondada);
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn--primary {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.btn--secondary {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* ==========================================
+   5. RESPONSIVIDADE (Telemóvel)
+   ========================================== */
+@media (max-width: 600px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   6. Exemplo Focus
+   ========================================== */
+
+
+.campo-texto {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;    
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-texto:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.3); 
+    background-color: #f5f3ff;
+}
+
+/* ==========================================
+   7. Exemplo Active
+   ========================================== */
+
+.meu-botao {
+    background-color: #4f46e5; 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;    
+    transition: all 0.2s ease;
+}
+
+.meu-botao:hover {
+    background-color: #4338ca;
+}
+
+.meu-botao:active {
+   
+    transform: scale(0.95);    
+    background-color: #3730a3;
+}
